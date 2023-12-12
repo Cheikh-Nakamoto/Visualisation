@@ -1,14 +1,34 @@
 {{define "errorBase"}}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background: rgb(2, 0, 36);
+            background: rgb(218, 205, 233);
+            background: radial-gradient(circle, rgba(55, 51, 56, 0.9) 50%, rgba(218, 205, 233, 1) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            height: 100vh;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
 </head>
+
 <body>
     {{template "content" .}}
-    
+
 </body>
+
 </html>
 {{end}}

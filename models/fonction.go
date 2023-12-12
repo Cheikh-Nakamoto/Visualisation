@@ -56,8 +56,7 @@ func RemoveChar(s []string) []string {
 
 // The ParseData function parses data from the All_Artist variable and stores it in the ArtistPrint variable.
 func SearchId(id int) error {
-
-	Print := All_Artist[id]
+	Print := All_Artist[id-1]
 	FetchData(URL+"artist/"+strconv.Itoa(id), &Print)
 
 	readRelation, err := MiniRecup(Print.Relations)
