@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(218, 205, 233);
+}
+
+#main {
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    display: grid;
+    width : 80vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+   
+}
+
+#info {
+    align-items: center;
+    justify-content: center;
+    margin : auto;
+    width: 100%;
+}
+
+.link img {
+    margin-top: 10%;
+    border-radius: 20%;
+    overflow: hidden;
+    width: 65%;
+    height: auto;
+    box-shadow: 0 0 1em 0.2em rgb(55, 51, 56);
+}
+
+.link span {
+    display: block; /* Make the span a block-level element */
+    margin-top: 20px; /* Add some space between image and name */
+    margin-bottom: 20px;
+    color :rgb(255, 255, 255);
+    font-size: 1.1em;
+    font-weight: bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 1120px) {
+    #main {
+        grid-template-columns: 1fr 1fr 1fr;
+        width : 80vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #main {
+        grid-template-columns: 1fr 1fr;
+        width : 80vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #main {
+        grid-template-columns: 1fr 1fr;
+        width : 95vw;
+    }
+}
+
+
+.link {
+    margin: 5%;
+    text-align: center; /* Center the content inside .link */
+    background-color: rgb(125, 109, 146);
+    border-radius: 10%;
+    clip-path: circle(50% 50%);
+}
+
+.link:hover {
+    background-color:rgb(168, 142, 199);
+    transform: scale(1.1);
+    
+}
+
+

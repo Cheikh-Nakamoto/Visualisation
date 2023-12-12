@@ -1,0 +1,15 @@
+{{template "base" .}}
+{{define "content"}}
+<div id="main">
+    {{range .}}
+    <div class="link artist-slide">
+        
+            <a href="/info?id={{.ID}}">
+                <img src="{{.Image}}" alt="{{.Name}}">
+            </a>
+            <span>{{.Name}}</span>
+
+    </div>
+    {{end}}
+</div>
+{{end}}

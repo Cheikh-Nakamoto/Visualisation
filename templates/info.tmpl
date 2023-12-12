@@ -1,0 +1,33 @@
+{{template "base" .}}
+{{define "content"}}
+<div id="info">
+    <img src="{{.Image}}" width="200px" height="200px" alt="{{.Name}}">
+    <p><span>Name: </span>{{.Name}}</p>
+    <p><span>Members:</span></p>
+    {{if eq .ID 1}}
+    {{range .Members}}
+    <p>{{.}},</p>
+    {{end}}
+    {{else}}
+    {{range .Members}}
+    <p>{{.}}</p>
+    {{end}}
+    {{end}}
+    <p><span>FirstAlbum:</span>{{.FirstAlbum}}</p>
+    <p><span>Locations:</span></p>
+    {{range .Locations}}
+    <p>{{.}}</p>
+    {{end}}
+    <p><span>Dates:</span></p>
+    {{range .ConcertDates}}
+    <p>{{.}}</p>
+    {{end}}
+    <p><span>Relations:</span></p>
+    {{range $key, $value := .Relations}}
+    {{range $value}}
+    <p>{{$key}} : {{.}}</p>
+    {{end}}
+    {{end}}
+
+</div>
+{{end}}
